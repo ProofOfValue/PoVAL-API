@@ -4,79 +4,11 @@ var express = require('express');
 var router = express.Router();
 
 router.get('/', function(req, res, next) {
-    res.status(200)
-      .json({
-        status: 'success',
-        message: 'Live long and prosper!'
-      });
+    res.status(200).json('PoVAL API v0.1.0');
+      // .json({
+      //   status: 'success',
+      //   message: 'Live long and prosper!'
+      // });
 });
 
 module.exports = router;
-
-
-//app.use(express.static(__dirname + '/public'));
-// views is directory for all template files
-// app.set('views', __dirname + '/views');
-// app.set('view engine', 'ejs');
-
-// app.get('/', function(request, response) {
-//   response.render('pages/index');
-// });
-
-// var pg = require('pg');
-// app.get('/db', function (request, response) {
-//   pg.connect(process.env.DATABASE_URL, function(err, client, done) {
-//     client.query('SELECT * FROM test_table', function(err, result) {
-//       done();
-//       if (err)
-//        { console.error(err); response.send("Error " + err); }
-//       else
-//        { response.render('pages/db', {results: result.rows} ); }
-//     });
-//   });
-// });
-
-// app.listen(app.get('port'), function() {
-//   console.log('Node app is running on port', app.get('port'));
-// });
-
-// var express = require('express');
-// var app = express();
-// var pg = require('pg');
-// var pool = new pg.Pool();
-//
-// app.set('port', (process.env.PORT || 5000));
-//
-// app.use(express.static(__dirname + '/public'));
-//
-// // views is directory for all template files
-// app.set('views', __dirname + '/views');
-// app.set('view engine', 'ejs');
-//
-// app.get('/', function(request, response) {
-//   response.render('pages/index');
-// });
-//
-// app.get('/db', function (request, response) {
-//   try{
-//       pool.connect(process.env.DATABASE_URL, function(err, client, done) {
-//         pool.query('SELECT * FROM test_table', function(err, result) {
-//           done();
-//           if (err)
-//            { console.error(err); response.send("Error " + err); }
-//           else
-//            { response.render('pages/db', {results: result.rows} ); }
-//         });
-//       });
-//       pool.end();
-//   }
-//   catch (error) {
-//     response.send(error);
-//   }
-// });
-//
-// app.listen(app.get('port'), function() {
-//   console.log('Node app is running on port', app.get('port'));
-// });
-//
-// function () { }
